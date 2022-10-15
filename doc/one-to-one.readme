@@ -1,0 +1,34 @@
+#### Use Case One To One
+The scenario is about a basic healthcare system where WSO2 Micro Integrator is used as the integration middleware thats helps the patients for checking the doctor list according to doctor's specialization.
+
+For the purpose we need a api service. so we download the service [API-SERVICE](../apis/doctorinfo-jdk11.jar) and run it using the command
+
+```bash
+   java -jar DoctorInfo-JDK11.jar
+```
+The api service is expose in the port 9090. You can access browsing the url
+```url
+http://localhost:9090/{hospitalName}/doctors/{specialization}
+```
+Here is the `hospitalName=grandOak` and the doctor `specialization=Ophthalmologist`
+
+The response is
+```json
+{
+    "doctors": {
+        "doctor": [
+            {
+                "name": "John Mathew",
+                "time": "03:30 PM",
+                "hospital": "Grand Oak"
+            },
+            {
+                "name": "Allan Silvester",
+                "time": "04:30 PM",
+                "hospital": "Grand Oak"
+            }
+        ]
+    }
+}
+```
+
