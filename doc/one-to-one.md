@@ -15,7 +15,6 @@ Let’s try a simple scenario where a patient makes an inquiry specifying the do
     ```
     Response:
     ```json
-    //output
     [
     {
         "name":"thomas collins",
@@ -39,7 +38,6 @@ Let’s try a simple scenario where a patient makes an inquiry specifying the do
         "fee":8000.0
     }
     ]
-    ...........
     ```
 2. Create a REST API resource and other artifacts using WSO2 Integration Studio, and then deploy them in the embedded WSO2 Micro Integrator instance. The default API resource will be configured to receive the client request in place of the back-end service, thereby decoupling the client and the back-end service. The response message with the requested doctor details will be routed back to the client through the same API resource
 
