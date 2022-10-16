@@ -19,7 +19,6 @@ We setup our backend service and undarstand the basic workflow. The we implement
     ```
     Response: Hospital and Doctor information.
     ```json
-    //output
     [
     {
         "name":"thomas collins",
@@ -43,7 +42,6 @@ We setup our backend service and undarstand the basic workflow. The we implement
         "fee":8000.0
     }
     ]
-    ...........
     ```
 2. To make appoinment, send just send a request with this [make-an-appointment-payload.json](../resouces/make-an-appointment-payload.json)
     ```json
