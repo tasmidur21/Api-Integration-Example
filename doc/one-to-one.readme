@@ -433,8 +433,10 @@ You have now created and deployed an API resource in the Micro Integrator, which
 </api>
 
 ```
-Defination Of Mediator:
-[https://docs.wso2.com/display/EI650/ESB+Mediators](https://docs.wso2.com/display/EI650/ESB+Mediators)
+Defination Of the implemented mediators: 
+
+Link: [https://docs.wso2.com/display/EI650/ESB+Mediators](https://docs.wso2.com/display/EI650/ESB+Mediators)
+
 - ***Resource mediator(resource):***  Publishing the Rest Api for the subcriber.A subcriber can access the api using `https/http://<APIM-IP>/querydoctor/{category}`
 
 - ***InSequence (inSequence):*** The Sequence Mediator refers to an already defined sequence element, which is used to invoke a named sequence of mediators. This is useful when you need to use a particular set on mediators in a given order repeatedly.
