@@ -411,6 +411,44 @@ Now, check the **Console** tab of WSO2 Integration Studio and you will see the f
 
 You have now created and deployed an API resource in the Micro Integrator, which receives requests, logs a message using the Log mediator, sends the request to a back-end service using the Send mediator, and returns a response to the requesting client.
 
+### You can config using the source code:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/healthcare" name="HealthcareAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/querydoctor/{category}">
+        <inSequence>
+            <log level="custom">
+                <property name="Log Properties Message" value="&quot;welcome to HealthCare&quot;"/>
+            </log>
+            <call>
+                <endpoint key="QueryDoctorEP"/>
+                <source type="body"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
+
+```
+Defination Of Mediator:
+[https://docs.wso2.com/display/EI650/ESB+Mediators](https://docs.wso2.com/display/EI650/ESB+Mediators)
+- ***Resource mediator(resource):***  Publishing the Rest Api for the subcriber.A subcriber can access the api using `https/http://<APIM-IP>/querydoctor/{category}`
+
+- ***InSequence (inSequence):*** The Sequence Mediator refers to an already defined sequence element, which is used to invoke a named sequence of mediators. This is useful when you need to use a particular set on mediators in a given order repeatedly.
+
+- ***Log mediator(log)***: The Log mediator is used to log mediated messages.
+
+- ***Call mediator(call)***: The Call mediator is used to send messages out of the ESB profile to an endpoint. You can invoke services either in blocking or non-blocking manner. 
+
+- ***OutSequence mediator***: Applies to messages that are in the Out path of the ESB profile.
+
+
+
+
+
 
 
 
